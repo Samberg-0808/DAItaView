@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Uploads & local data (mounted as Docker volumes)
+backend/uploads/
+knowledge/
+vector_store/
+
+# Alembic (keep versions, ignore SQLite test DBs)
+*.db
+
+# IDE
+.vscode/
+.idea/
+
+# Claude internal
+.claude/

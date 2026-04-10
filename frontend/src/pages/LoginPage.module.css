@@ -1,0 +1,10 @@
+.container { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+.card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 40px; width: 360px; }
+.title { margin: 0 0 4px; font-size: 24px; font-weight: 700; }
+.subtitle { margin: 0 0 32px; color: #888; font-size: 14px; }
+.form { display: flex; flex-direction: column; gap: 12px; }
+.input { background: #111; border: 1px solid #333; border-radius: 8px; padding: 12px; color: #ececec; font-size: 14px; outline: none; }
+.input:focus { border-color: #555; }
+.error { color: #f87171; font-size: 13px; margin: 0; }
+.button { background: #3b82f6; border: none; border-radius: 8px; color: white; cursor: pointer; font-size: 14px; font-weight: 600; padding: 12px; }
+.button:disabled { opacity: 0.6; cursor: not-allowed; }

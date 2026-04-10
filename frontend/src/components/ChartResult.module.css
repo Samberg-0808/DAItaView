@@ -1,0 +1,4 @@
+.wrap { position: relative; }
+.actions { display: flex; justify-content: flex-end; margin-bottom: 6px; }
+.csvBtn { background: #1f1f1f; border: 1px solid #333; border-radius: 6px; color: #ececec; cursor: pointer; font-size: 12px; padding: 4px 10px; }
+.csvBtn:hover { background: #2a2a2a; }

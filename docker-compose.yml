@@ -1,0 +1,82 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+      - VITE_WS_URL=ws://localhost:8000
+    depends_on:
+      - api
+    networks:
+      - daitaview
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - uploads_data:/app/uploads
+      - knowledge_data:/app/knowledge
+      - vector_store_data:/app/vector_store
+    depends_on:
+      db:
+        condition: service_healthy
+      execution:
+        condition: service_started
+    networks:
+      - daitaview
+
+  execution:
+    build:
+      context: ./execution
+      dockerfile: Dockerfile
+    expose:
+      - "8001"
+    environment:
+      - EXECUTION_TIMEOUT_SECONDS=30
+      - EXECUTION_MEMORY_LIMIT_MB=512
+    # No external network access — internal only
+    networks:
+      - daitaview
+    cap_drop:
+      - ALL
+    cap_add:
+      - DAC_OVERRIDE
+    read_only: false
+    security_opt:
+      - no-new-privileges:true
+
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: daitaview
+      POSTGRES_PASSWORD: daitaview
+      POSTGRES_DB: daitaview
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U daitaview"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - daitaview
+
+volumes:
+  postgres_data:
+  uploads_data:
+  knowledge_data:
+  vector_store_data:
+
+networks:
+  daitaview:
+    driver: bridge

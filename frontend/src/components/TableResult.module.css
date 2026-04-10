@@ -1,0 +1,15 @@
+.wrap { display: flex; flex-direction: column; gap: 8px; }
+.toolbar { align-items: center; display: flex; gap: 12px; justify-content: flex-end; }
+.count { color: #888; font-size: 12px; }
+.csvBtn { background: #1f1f1f; border: 1px solid #333; border-radius: 6px; color: #ececec; cursor: pointer; font-size: 12px; padding: 4px 10px; }
+.csvBtn:hover { background: #2a2a2a; }
+.tableWrap { overflow-x: auto; }
+.table { border-collapse: collapse; font-size: 13px; min-width: 100%; }
+.th { background: #1a1a1a; border-bottom: 1px solid #2a2a2a; color: #aaa; cursor: pointer; padding: 8px 12px; text-align: left; user-select: none; white-space: nowrap; }
+.th:hover { color: #ececec; }
+.tr:nth-child(even) { background: #111; }
+.td { border-bottom: 1px solid #1a1a1a; color: #ececec; max-width: 320px; overflow: hidden; padding: 6px 12px; text-overflow: ellipsis; white-space: nowrap; }
+.pagination { align-items: center; display: flex; gap: 12px; justify-content: center; padding: 8px; }
+.pagination button { background: #1f1f1f; border: 1px solid #333; border-radius: 6px; color: #ececec; cursor: pointer; padding: 4px 12px; }
+.pagination button:disabled { color: #444; cursor: default; }
+.pagination span { color: #888; font-size: 13px; }

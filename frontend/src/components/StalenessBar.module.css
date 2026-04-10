@@ -1,0 +1,6 @@
+.bar { align-items: center; display: flex; gap: 8px; justify-content: flex-end; }
+.time { color: #555; font-size: 12px; }
+.action { background: none; border: 1px solid #333; border-radius: 6px; color: #888; cursor: pointer; font-size: 12px; padding: 3px 10px; }
+.action:hover { border-color: #555; color: #ececec; }
+.action:disabled { opacity: .5; cursor: not-allowed; }
+.error { color: #f87171; font-size: 12px; flex: 1; }

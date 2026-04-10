@@ -1,0 +1,25 @@
+.page { display: flex; flex-direction: column; min-height: 100vh; }
+.content { margin: 0 auto; max-width: 860px; padding: 32px 24px; width: 100%; }
+.title { font-size: 20px; font-weight: 700; margin: 0 0 28px; }
+.section { margin-bottom: 40px; }
+.sectionHeader { align-items: center; display: flex; justify-content: space-between; margin-bottom: 16px; }
+.sectionTitle { font-size: 15px; font-weight: 600; margin: 0; }
+.addBtn { background: #1e3a5f; border: 1px solid #3b82f6; border-radius: 7px; color: #60a5fa; cursor: pointer; font-size: 13px; padding: 7px 14px; }
+.form { background: #161616; border: 1px solid #2a2a2a; border-radius: 10px; display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; padding: 16px; }
+.input { background: #0f0f0f; border: 1px solid #333; border-radius: 6px; color: #ececec; flex: 1 1 160px; font-size: 13px; outline: none; padding: 8px 12px; }
+.select { background: #0f0f0f; border: 1px solid #333; border-radius: 6px; color: #ececec; flex: 1 1 120px; font-size: 13px; padding: 8px 10px; }
+.saveBtn { background: #1e3a5f; border: 1px solid #3b82f6; border-radius: 6px; color: #60a5fa; cursor: pointer; padding: 8px 16px; }
+.saveBtn:disabled { opacity: .5; }
+.error { color: #f87171; font-size: 12px; margin: 0; width: 100%; }
+.sourceList { display: flex; flex-direction: column; gap: 10px; }
+.sourceCard { align-items: center; background: #161616; border: 1px solid #2a2a2a; border-radius: 8px; display: flex; justify-content: space-between; padding: 14px 16px; }
+.sourceInfo { display: flex; flex-direction: column; gap: 2px; }
+.sourceName { font-size: 14px; font-weight: 500; }
+.sourceType { color: #888; font-size: 11px; text-transform: uppercase; }
+.sourceActions { display: flex; gap: 8px; }
+.refreshBtn { background: #1f1f1f; border: 1px solid #333; border-radius: 5px; color: #ececec; cursor: pointer; font-size: 12px; padding: 5px 12px; }
+.deleteBtn { background: none; border: 1px solid #5f2020; border-radius: 5px; color: #f87171; cursor: pointer; font-size: 12px; padding: 5px 12px; }
+.uploadZone { align-items: center; background: #161616; border: 2px dashed #333; border-radius: 10px; cursor: pointer; display: flex; font-size: 13px; color: #888; justify-content: center; margin-bottom: 12px; min-height: 80px; padding: 20px; }
+.uploadZone:hover { border-color: #555; }
+.uploadForm { display: flex; flex-wrap: wrap; gap: 10px; }
+.empty { color: #555; font-size: 13px; }

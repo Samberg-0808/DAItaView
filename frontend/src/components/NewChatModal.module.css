@@ -1,0 +1,14 @@
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; z-index: 200; }
+.modal { background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 24px; width: 400px; }
+.title { margin: 0 0 16px; font-size: 18px; }
+.list { display: flex; flex-direction: column; gap: 8px; max-height: 240px; overflow-y: auto; margin-bottom: 16px; }
+.item { background: #111; border: 1px solid #2a2a2a; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 12px; }
+.item:hover { border-color: #444; }
+.selected { border-color: #3b82f6 !important; background: #1e293b !important; }
+.type { background: #2a2a2a; border-radius: 4px; color: #888; font-size: 11px; padding: 2px 6px; text-transform: uppercase; }
+.name { font-size: 14px; }
+.empty { color: #888; font-size: 14px; }
+.footer { display: flex; justify-content: flex-end; gap: 8px; }
+.cancel { background: none; border: 1px solid #333; border-radius: 8px; color: #888; cursor: pointer; padding: 8px 16px; }
+.start { background: #3b82f6; border: none; border-radius: 8px; color: white; cursor: pointer; font-weight: 600; padding: 8px 16px; }
+.start:disabled { opacity: .5; cursor: not-allowed; }
