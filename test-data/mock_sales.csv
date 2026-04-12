@@ -1,0 +1,61 @@
+sale_id,sale_date,customer_name,customer_region,customer_tier,salesperson,salesperson_region,product_name,product_category,quantity,unit_price,discount_pct,total_amount
+1,2023-01-05,Acme Corp,West,platinum,Alice Chen,West,Enterprise Suite,Software,2,1200.00,10,2160.00
+2,2023-01-12,Bright Analytics,East,gold,Bob Martinez,East,Analytics Pro,Software,3,299.00,5,851.55
+3,2023-01-19,Cedar Technologies,North,silver,Carol Kim,North,Dashboard Starter,Software,5,49.00,0,245.00
+4,2023-01-25,Delta Insights,South,gold,David Okafor,South,Training Workshop,Service,1,399.00,0,399.00
+5,2023-02-03,Echo Ventures,West,bronze,Eva Rossi,West,Cloud Storage 1TB,Cloud,10,19.00,0,190.00
+6,2023-02-10,Frontier Data,East,platinum,Frank Nguyen,East,Data Connector Pack,Add-on,2,149.00,5,283.10
+7,2023-02-17,Global Metrics,North,silver,Grace Patel,North,Premium Support Plan,Service,1,599.00,0,599.00
+8,2023-02-24,Horizon Systems,South,bronze,Henry Walsh,South,Analytics Pro,Software,2,299.00,0,598.00
+9,2023-03-03,Iris Research,West,gold,Alice Chen,West,Enterprise Suite,Software,1,1200.00,15,1020.00
+10,2023-03-11,Jade Consulting,East,silver,Bob Martinez,East,Dashboard Starter,Software,3,49.00,0,147.00
+11,2023-03-18,Kestrel Finance,North,platinum,Carol Kim,North,Custom Integration,Service,1,2500.00,5,2375.00
+12,2023-03-25,Luminary Labs,South,bronze,David Okafor,South,Training Workshop,Service,2,399.00,0,798.00
+13,2023-04-06,Acme Corp,West,platinum,Alice Chen,West,Premium Support Plan,Service,2,599.00,5,1138.10
+14,2023-04-14,Bright Analytics,East,gold,Bob Martinez,East,API Access Token,Add-on,5,29.00,0,145.00
+15,2023-04-21,Cedar Technologies,North,silver,Carol Kim,North,Analytics Pro,Software,4,299.00,0,1196.00
+16,2023-04-28,Delta Insights,South,gold,David Okafor,South,Cloud Storage 10TB,Cloud,2,149.00,0,298.00
+17,2023-05-05,Echo Ventures,West,bronze,Eva Rossi,West,Enterprise Suite,Software,1,1200.00,20,960.00
+18,2023-05-13,Frontier Data,East,platinum,Frank Nguyen,East,Cloud Storage 1TB,Cloud,20,19.00,0,380.00
+19,2023-05-20,Global Metrics,North,silver,Grace Patel,North,Data Connector Pack,Add-on,3,149.00,5,424.65
+20,2023-05-27,Horizon Systems,South,bronze,Henry Walsh,South,Dashboard Starter,Software,6,49.00,0,294.00
+21,2023-06-04,Iris Research,West,gold,Alice Chen,West,Training Workshop,Service,1,399.00,0,399.00
+22,2023-06-12,Jade Consulting,East,silver,Bob Martinez,East,Analytics Pro,Software,2,299.00,0,598.00
+23,2023-06-19,Kestrel Finance,North,platinum,Carol Kim,North,Premium Support Plan,Service,3,599.00,10,1617.30
+24,2023-06-26,Luminary Labs,South,bronze,David Okafor,South,Enterprise Suite,Software,1,1200.00,0,1200.00
+25,2023-07-07,Metro Analytics,West,gold,Eva Rossi,West,Analytics Pro,Software,5,299.00,5,1420.25
+26,2023-07-15,Nexus Dynamics,East,silver,Frank Nguyen,East,Data Connector Pack,Add-on,2,149.00,0,298.00
+27,2023-07-22,Orbit Solutions,North,platinum,Grace Patel,North,Enterprise Suite,Software,2,1200.00,10,2160.00
+28,2023-07-29,Acme Corp,West,platinum,Henry Walsh,South,API Access Token,Add-on,10,29.00,0,290.00
+29,2023-08-05,Bright Analytics,East,gold,Alice Chen,West,Training Workshop,Service,2,399.00,0,798.00
+30,2023-08-12,Cedar Technologies,North,silver,Bob Martinez,East,Premium Support Plan,Service,1,599.00,5,569.05
+31,2023-08-19,Delta Insights,South,gold,Carol Kim,North,Cloud Storage 1TB,Cloud,30,19.00,0,570.00
+32,2023-08-26,Echo Ventures,West,bronze,David Okafor,South,Analytics Pro,Software,3,299.00,0,897.00
+33,2023-09-02,Frontier Data,East,platinum,Eva Rossi,West,Custom Integration,Service,1,2500.00,0,2500.00
+34,2023-09-10,Global Metrics,North,silver,Frank Nguyen,East,Dashboard Starter,Software,4,49.00,0,196.00
+35,2023-09-17,Horizon Systems,South,bronze,Grace Patel,North,Enterprise Suite,Software,1,1200.00,15,1020.00
+36,2023-09-24,Iris Research,West,gold,Henry Walsh,South,Data Connector Pack,Add-on,2,149.00,0,298.00
+37,2023-10-01,Jade Consulting,East,silver,Alice Chen,West,Analytics Pro,Software,6,299.00,0,1794.00
+38,2023-10-09,Kestrel Finance,North,platinum,Bob Martinez,East,Training Workshop,Service,2,399.00,5,758.10
+39,2023-10-16,Luminary Labs,South,bronze,Carol Kim,North,Premium Support Plan,Service,1,599.00,0,599.00
+40,2023-10-23,Metro Analytics,West,gold,David Okafor,South,Enterprise Suite,Software,3,1200.00,10,3240.00
+41,2023-11-04,Nexus Dynamics,East,silver,Eva Rossi,West,Cloud Storage 1TB,Cloud,15,19.00,0,285.00
+42,2023-11-11,Orbit Solutions,North,platinum,Frank Nguyen,East,Data Connector Pack,Add-on,3,149.00,0,447.00
+43,2023-11-18,Acme Corp,West,platinum,Grace Patel,North,Analytics Pro,Software,5,299.00,0,1495.00
+44,2023-11-25,Bright Analytics,East,gold,Henry Walsh,South,Cloud Storage 10TB,Cloud,10,149.00,5,1415.50
+45,2023-12-02,Cedar Technologies,North,silver,Alice Chen,West,Enterprise Suite,Software,2,1200.00,20,1920.00
+46,2023-12-10,Delta Insights,South,gold,Bob Martinez,East,Premium Support Plan,Service,2,599.00,0,1198.00
+47,2023-12-17,Echo Ventures,West,bronze,Carol Kim,North,Training Workshop,Service,3,399.00,0,1197.00
+48,2023-12-26,Frontier Data,East,platinum,David Okafor,South,Custom Integration,Service,1,2500.00,10,2250.00
+49,2024-01-08,Global Metrics,North,silver,Eva Rossi,West,Analytics Pro,Software,4,299.00,0,1196.00
+50,2024-01-15,Horizon Systems,South,bronze,Frank Nguyen,East,Enterprise Suite,Software,1,1200.00,5,1140.00
+51,2024-01-22,Iris Research,West,gold,Grace Patel,North,Dashboard Starter,Software,5,49.00,0,245.00
+52,2024-01-29,Jade Consulting,East,silver,Henry Walsh,South,Premium Support Plan,Service,2,599.00,0,1198.00
+53,2024-02-05,Kestrel Finance,North,platinum,Alice Chen,West,Data Connector Pack,Add-on,3,149.00,0,447.00
+54,2024-02-12,Luminary Labs,South,bronze,Bob Martinez,East,Cloud Storage 1TB,Cloud,25,19.00,0,475.00
+55,2024-02-19,Metro Analytics,West,gold,Carol Kim,North,Training Workshop,Service,2,399.00,5,758.10
+56,2024-02-26,Nexus Dynamics,East,silver,David Okafor,South,Analytics Pro,Software,3,299.00,0,897.00
+57,2024-03-04,Orbit Solutions,North,platinum,Eva Rossi,West,Enterprise Suite,Software,2,1200.00,10,2160.00
+58,2024-03-11,Acme Corp,West,platinum,Frank Nguyen,East,API Access Token,Add-on,20,29.00,0,580.00
+59,2024-03-18,Bright Analytics,East,gold,Grace Patel,North,Premium Support Plan,Service,1,599.00,0,599.00
+60,2024-03-25,Cedar Technologies,North,silver,Henry Walsh,South,Custom Integration,Service,1,2500.00,5,2375.00

@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "description": "DAItaView test dataset – customers with KPI snapshots",
+    "generated_at": "2024-03-31",
+    "record_count": 15
+  },
+  "customers": [
+    {
+      "id": 1,
+      "name": "Acme Corp",
+      "email": "billing@acme.com",
+      "region": "West",
+      "tier": "platinum",
+      "signup_date": "2020-01-15",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 6663.00,
+        "total_orders": 5,
+        "open_tickets": 0,
+        "lifetime_days": 1536,
+        "avg_order_value": 1332.60
+      },
+      "contacts": [
+        { "role": "billing",   "name": "Sandra Liu",    "email": "sliu@acme.com" },
+        { "role": "technical", "name": "Marcus Webb",   "email": "mwebb@acme.com" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bright Analytics",
+      "email": "admin@brightanalytics.io",
+      "region": "East",
+      "tier": "gold",
+      "signup_date": "2021-03-22",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 3409.10,
+        "total_orders": 5,
+        "open_tickets": 1,
+        "lifetime_days": 1105,
+        "avg_order_value": 681.82
+      },
+      "contacts": [
+        { "role": "primary", "name": "Priya Mehta", "email": "pmehta@brightanalytics.io" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Cedar Technologies",
+      "email": "ops@cedartec.com",
+      "region": "North",
+      "tier": "silver",
+      "signup_date": "2022-06-10",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 6960.00,
+        "total_orders": 5,
+        "open_tickets": 0,
+        "lifetime_days": 660,
+        "avg_order_value": 1392.00
+      },
+      "contacts": [
+        { "role": "primary", "name": "Tom Gallagher", "email": "tgallagher@cedartec.com" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Delta Insights",
+      "email": "contact@deltainsights.ai",
+      "region": "South",
+      "tier": "gold",
+      "signup_date": "2020-09-05",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 3464.00,
+        "total_orders": 5,
+        "open_tickets": 0,
+        "lifetime_days": 1302,
+        "avg_order_value": 692.80
+      },
+      "contacts": [
+        { "role": "primary",   "name": "Ayesha Nkosi", "email": "ankosi@deltainsights.ai" },
+        { "role": "technical", "name": "Liam Foster",  "email": "lfoster@deltainsights.ai" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Echo Ventures",
+      "email": "team@echoventures.co",
+      "region": "West",
+      "tier": "bronze",
+      "signup_date": "2023-02-18",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 3434.00,
+        "total_orders": 4,
+        "open_tickets": 1,
+        "lifetime_days": 406,
+        "avg_order_value": 858.50
+      },
+      "contacts": [
+        { "role": "primary", "name": "Chloe Brennan", "email": "cbrennan@echoventures.co" }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Frontier Data",
+      "email": "info@frontierdata.net",
+      "region": "East",
+      "tier": "platinum",
+      "signup_date": "2019-11-01",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 5996.15,
+        "total_orders": 5,
+        "open_tickets": 0,
+        "lifetime_days": 1611,
+        "avg_order_value": 1199.23
+      },
+      "contacts": [
+        { "role": "billing",   "name": "Derek Sato",   "email": "dsato@frontierdata.net" },
+        { "role": "technical", "name": "Elena Kovacs", "email": "ekovacs@frontierdata.net" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Global Metrics",
+      "email": "hello@globalmetrics.com",
+      "region": "North",
+      "tier": "silver",
+      "signup_date": "2021-07-30",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 2084.65,
+        "total_orders": 4,
+        "open_tickets": 0,
+        "lifetime_days": 975,
+        "avg_order_value": 521.16
+      },
+      "contacts": [
+        { "role": "primary", "name": "Fatima Al-Rashid", "email": "falrashid@globalmetrics.com" }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Horizon Systems",
+      "email": "buy@horizonsys.io",
+      "region": "South",
+      "tier": "bronze",
+      "signup_date": "2022-12-03",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 2785.05,
+        "total_orders": 4,
+        "open_tickets": 1,
+        "lifetime_days": 484,
+        "avg_order_value": 696.26
+      },
+      "contacts": [
+        { "role": "primary", "name": "Noah Peterson", "email": "npeterson@horizonsys.io" }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Iris Research",
+      "email": "research@iris.org",
+      "region": "West",
+      "tier": "gold",
+      "signup_date": "2020-04-14",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 1817.00,
+        "total_orders": 4,
+        "open_tickets": 0,
+        "lifetime_days": 1447,
+        "avg_order_value": 454.25
+      },
+      "contacts": [
+        { "role": "primary",   "name": "Yuki Tanaka",  "email": "ytanaka@iris.org" },
+        { "role": "technical", "name": "Omar Hassan",  "email": "ohassan@iris.org" }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Jade Consulting",
+      "email": "hello@jadeconsult.biz",
+      "region": "East",
+      "tier": "silver",
+      "signup_date": "2023-05-09",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 3737.00,
+        "total_orders": 4,
+        "open_tickets": 0,
+        "lifetime_days": 326,
+        "avg_order_value": 934.25
+      },
+      "contacts": [
+        { "role": "primary", "name": "Sophie Dumont", "email": "sdumont@jadeconsult.biz" }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Kestrel Finance",
+      "email": "ops@kestrelfinance.com",
+      "region": "North",
+      "tier": "platinum",
+      "signup_date": "2018-08-20",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 3577.40,
+        "total_orders": 4,
+        "open_tickets": 0,
+        "lifetime_days": 2049,
+        "avg_order_value": 894.35
+      },
+      "contacts": [
+        { "role": "billing",   "name": "James Obi",    "email": "jobi@kestrelfinance.com" },
+        { "role": "technical", "name": "Rachel Stone",  "email": "rstone@kestrelfinance.com" }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Luminary Labs",
+      "email": "dev@luminarylabs.dev",
+      "region": "South",
+      "tier": "bronze",
+      "signup_date": "2023-09-01",
+      "is_active": false,
+      "kpis": {
+        "total_revenue_usd": 4116.00,
+        "total_orders": 4,
+        "open_tickets": 1,
+        "lifetime_days": 211,
+        "avg_order_value": 1029.00
+      },
+      "contacts": [
+        { "role": "primary", "name": "Lena Müller", "email": "lmuller@luminarylabs.dev" }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Metro Analytics",
+      "email": "info@metroanalytics.com",
+      "region": "West",
+      "tier": "gold",
+      "signup_date": "2021-01-11",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 5854.25,
+        "total_orders": 3,
+        "open_tickets": 0,
+        "lifetime_days": 1175,
+        "avg_order_value": 1951.42
+      },
+      "contacts": [
+        { "role": "primary", "name": "Carlos Reyes", "email": "creyes@metroanalytics.com" }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Nexus Dynamics",
+      "email": "nexus@nexusdyn.io",
+      "region": "East",
+      "tier": "silver",
+      "signup_date": "2022-04-17",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 1480.00,
+        "total_orders": 3,
+        "open_tickets": 0,
+        "lifetime_days": 714,
+        "avg_order_value": 493.33
+      },
+      "contacts": [
+        { "role": "primary", "name": "Ingrid Larsson", "email": "ilarsson@nexusdyn.io" }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Orbit Solutions",
+      "email": "sales@orbitsol.com",
+      "region": "North",
+      "tier": "platinum",
+      "signup_date": "2019-06-25",
+      "is_active": true,
+      "kpis": {
+        "total_revenue_usd": 5319.00,
+        "total_orders": 3,
+        "open_tickets": 1,
+        "lifetime_days": 1740,
+        "avg_order_value": 1773.00
+      },
+      "contacts": [
+        { "role": "billing",   "name": "Wei Zhang",     "email": "wzhang@orbitsol.com" },
+        { "role": "technical", "name": "Amara Diallo",  "email": "adiallo@orbitsol.com" }
+      ]
+    }
+  ]
+}

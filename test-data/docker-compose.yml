@@ -1,0 +1,21 @@
+services:
+  testdb:
+    image: postgres:16-alpine
+    container_name: daitaview-testdb
+    environment:
+      POSTGRES_DB: testdb
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: testpass
+    ports:
+      - "5433:5432"          # 5433 avoids clash with the main app DB on 5432
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d:ro   # runs *.sql in filename order
+      - testdb_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U testuser -d testdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  testdb_data:
