@@ -52,7 +52,7 @@ export default function DataSourceAdminPage() {
       fd.append('file', uploadFile)
       fd.append('name', uploadName || uploadFile.name)
       fd.append('type', uploadType)
-      return api.post('/sources/upload', fd, { headers: { 'Content-Type': 'multipart/form-data' } })
+      return api.post('/sources/upload', fd)
     },
     onSuccess: () => { qc.invalidateQueries({ queryKey: ['sources'] }); setUploadFile(null); setUploadName('') },
   })
@@ -129,6 +129,8 @@ export default function DataSourceAdminPage() {
               <button className={styles.saveBtn} onClick={() => uploadMut.mutate()} disabled={uploadMut.isPending}>
                 {uploadMut.isPending ? 'Uploading…' : 'Upload'}
               </button>
+              {uploadMut.isError && <p className={styles.error}>{extractErrorMessage(uploadMut.error)}</p>}
+              {uploadMut.isSuccess && <p style={{ color: '#16a34a', fontSize: 13 }}>Uploaded successfully.</p>}
             </div>
           )}
         </div>
