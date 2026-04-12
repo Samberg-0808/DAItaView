@@ -29,7 +29,7 @@ async def login(body: LoginRequest, db: AsyncSession = Depends(get_db)):
     if not user:
         await AuditService.log(db, AuditEventType.login_failed, details={"username": body.username})
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
-    token = create_access_token(user.id, user.role)
+    token = create_access_token(user.id, user.role, user.username)
     await AuditService.log(db, AuditEventType.login_success, user_id=user.id)
     return TokenResponse(access_token=token)
 
