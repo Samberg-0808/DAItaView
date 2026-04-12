@@ -18,6 +18,7 @@ export default function App() {
           <Route path="/chat/:sessionId" element={<ProtectedRoute><ChatPage /></ProtectedRoute>} />
           <Route path="/admin/users" element={<ProtectedRoute><UserManagementPage /></ProtectedRoute>} />
           <Route path="/admin/sources" element={<ProtectedRoute><DataSourceAdminPage /></ProtectedRoute>} />
+          <Route path="/admin/knowledge" element={<Navigate to="/admin/sources" replace />} />
           <Route path="/admin/knowledge/:sourceId" element={<ProtectedRoute><KnowledgeEditorPage /></ProtectedRoute>} />
           <Route path="/admin/audit" element={<ProtectedRoute><AuditLogPage /></ProtectedRoute>} />
           <Route path="*" element={<Navigate to="/chat" replace />} />

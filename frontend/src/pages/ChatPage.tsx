@@ -126,7 +126,7 @@ export default function ChatPage() {
                 turn={t}
                 isFirst={i === 0}
                 sessionId={sessionId}
-                onRefreshed={(updated) => setTurns(prev => prev.map(x => x.id === updated.turn_id ? { ...x, result_cache: updated } : x))}
+                onRefreshed={(updated) => setTurns(prev => prev.map(x => x.id === t.id ? { ...x, result_cache: updated } : x))}
                 onReask={(q) => { setInput(q); ws.sendQuestion(q) }}
               />
             ))}

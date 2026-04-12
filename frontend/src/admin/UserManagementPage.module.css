@@ -1,20 +1,20 @@
 .page { display: flex; flex-direction: column; min-height: 100vh; }
 .content { margin: 0 auto; max-width: 960px; padding: 32px 24px; width: 100%; }
 .header { align-items: center; display: flex; justify-content: space-between; margin-bottom: 24px; }
-.title { font-size: 20px; font-weight: 700; margin: 0; }
-.newBtn { background: #1e3a5f; border: 1px solid #3b82f6; border-radius: 8px; color: #60a5fa; cursor: pointer; padding: 8px 16px; }
-.form { background: #161616; border: 1px solid #2a2a2a; border-radius: 10px; display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 16px; }
-.input { background: #0f0f0f; border: 1px solid #333; border-radius: 6px; color: #ececec; flex: 1 1 180px; font-size: 13px; padding: 8px 12px; outline: none; }
-.select { background: #0f0f0f; border: 1px solid #333; border-radius: 6px; color: #ececec; flex: 1 1 120px; font-size: 13px; padding: 8px 12px; }
-.saveBtn { background: #1e3a5f; border: 1px solid #3b82f6; border-radius: 6px; color: #60a5fa; cursor: pointer; padding: 8px 16px; }
+.title { font-size: 20px; font-weight: 700; margin: 0; color: #1a1a2e; }
+.newBtn { background: #eff6ff; border: 1px solid #3b82f6; border-radius: 8px; color: #1d4ed8; cursor: pointer; padding: 8px 16px; }
+.form { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 16px; }
+.input { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; color: #1a1a2e; flex: 1 1 180px; font-size: 13px; padding: 8px 12px; outline: none; }
+.select { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; color: #1a1a2e; flex: 1 1 120px; font-size: 13px; padding: 8px 12px; }
+.saveBtn { background: #eff6ff; border: 1px solid #3b82f6; border-radius: 6px; color: #1d4ed8; cursor: pointer; padding: 8px 16px; }
 .saveBtn:disabled { opacity: .5; }
 .table { border-collapse: collapse; width: 100%; font-size: 13px; }
-.table th { border-bottom: 1px solid #2a2a2a; color: #888; padding: 10px 12px; text-align: left; }
-.table td { border-bottom: 1px solid #1a1a1a; padding: 10px 12px; }
-.active { background: #0f3b1f; border-radius: 4px; color: #34d399; font-size: 11px; padding: 2px 8px; }
-.inactive { background: #2a1515; border-radius: 4px; color: #f87171; font-size: 11px; padding: 2px 8px; }
-.roleSelect { background: #1f1f1f; border: 1px solid #333; border-radius: 4px; color: #ececec; font-size: 12px; padding: 4px 6px; }
+.table th { border-bottom: 1px solid #e2e8f0; color: #64748b; padding: 10px 12px; text-align: left; }
+.table td { border-bottom: 1px solid #f1f5f9; padding: 10px 12px; }
+.active { background: #dcfce7; border-radius: 4px; color: #166534; font-size: 11px; padding: 2px 8px; }
+.inactive { background: #fee2e2; border-radius: 4px; color: #ef4444; font-size: 11px; padding: 2px 8px; }
+.roleSelect { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 4px; color: #1a1a2e; font-size: 12px; padding: 4px 6px; }
 .actions { display: flex; gap: 8px; }
-.permBtn { background: #1f1f1f; border: 1px solid #333; border-radius: 5px; color: #ececec; cursor: pointer; font-size: 12px; padding: 4px 10px; }
-.deactivateBtn { background: none; border: 1px solid #5f2020; border-radius: 5px; color: #f87171; cursor: pointer; font-size: 12px; padding: 4px 10px; }
-.empty { color: #555; }
+.permBtn { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 5px; color: #1a1a2e; cursor: pointer; font-size: 12px; padding: 4px 10px; }
+.deactivateBtn { background: none; border: 1px solid #fca5a5; border-radius: 5px; color: #ef4444; cursor: pointer; font-size: 12px; padding: 4px 10px; }
+.empty { color: #94a3b8; }

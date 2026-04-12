@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import NavBar from '@/components/NavBar'
+import AdminLayout from './AdminLayout'
 import api from '@/api/client'
 import styles from './AuditLogPage.module.css'
 
@@ -54,8 +54,7 @@ export default function AuditLogPage() {
   })
 
   return (
-    <div className={styles.page}>
-      <NavBar />
+    <AdminLayout>
       <div className={styles.content}>
         <div className={styles.header}>
           <h1 className={styles.title}>Audit Log</h1>
@@ -101,6 +100,6 @@ export default function AuditLogPage() {
           </div>
         )}
       </div>
-    </div>
+    </AdminLayout>
   )
 }

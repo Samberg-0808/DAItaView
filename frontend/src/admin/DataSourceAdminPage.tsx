@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import NavBar from '@/components/NavBar'
+import AdminLayout from './AdminLayout'
 import api from '@/api/client'
 import type { DataSource } from '@/types'
 import styles from './DataSourceAdminPage.module.css'
@@ -55,8 +55,7 @@ export default function DataSourceAdminPage() {
   })
 
   return (
-    <div className={styles.page}>
-      <NavBar />
+    <AdminLayout>
       <div className={styles.content}>
         <h1 className={styles.title}>Data Sources</h1>
 
@@ -122,6 +121,6 @@ export default function DataSourceAdminPage() {
           )}
         </div>
       </div>
-    </div>
+    </AdminLayout>
   )
 }

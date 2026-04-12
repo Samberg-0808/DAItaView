@@ -31,6 +31,9 @@ dependencies = [
     "python-dotenv>=1.0.0",
 ]
 
+[tool.hatch.build.targets.wheel]
+packages = ["backend"]
+
 [project.optional-dependencies]
 dev = [
     "pytest>=8.2.0",

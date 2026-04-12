@@ -10,7 +10,7 @@ interface Props {
   turn: SessionTurn
   isFirst: boolean
   sessionId: string
-  onRefreshed: (updated: SessionTurn) => void
+  onRefreshed: (updated: any) => void
   onReask: (question: string) => void
 }
 

@@ -1,12 +1,12 @@
-.sidebar { width: 260px; min-width: 260px; background: #111; border-right: 1px solid #2a2a2a; display: flex; flex-direction: column; padding: 12px 8px; overflow-y: auto; height: calc(100vh - 48px); }
-.newChat { background: #1f1f1f; border: 1px solid #333; border-radius: 8px; color: #ececec; cursor: pointer; font-size: 13px; padding: 10px; margin-bottom: 16px; text-align: left; }
-.newChat:hover { background: #2a2a2a; }
-.groupLabel { color: #555; font-size: 11px; font-weight: 600; padding: 8px 8px 4px; text-transform: uppercase; letter-spacing: 0.05em; margin: 0; }
+.sidebar { width: 260px; min-width: 260px; background: #f8fafc; border-right: 1px solid #e2e8f0; display: flex; flex-direction: column; padding: 12px 8px; overflow-y: auto; height: calc(100vh - 48px); }
+.newChat { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; color: #1a1a2e; cursor: pointer; font-size: 13px; padding: 10px; margin-bottom: 16px; text-align: left; }
+.newChat:hover { background: #f1f5f9; }
+.groupLabel { color: #94a3b8; font-size: 11px; font-weight: 600; padding: 8px 8px 4px; text-transform: uppercase; letter-spacing: 0.05em; margin: 0; }
 .item { align-items: center; border-radius: 6px; cursor: pointer; display: flex; justify-content: space-between; padding: 8px; position: relative; }
-.item:hover { background: #1a1a1a; }
-.active { background: #1e293b !important; }
-.title { flex: 1; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.item:hover { background: #f1f5f9; }
+.active { background: #eff6ff !important; }
+.title { flex: 1; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #1a1a2e; }
 .actions { display: none; gap: 4px; }
 .item:hover .actions { display: flex; }
-.actions button { background: none; border: none; color: #888; cursor: pointer; font-size: 13px; padding: 2px; }
-.renameInput { background: #0f0f0f; border: 1px solid #3b82f6; border-radius: 4px; color: #ececec; flex: 1; font-size: 13px; padding: 2px 6px; outline: none; }
+.actions button { background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 13px; padding: 2px; }
+.renameInput { background: #ffffff; border: 1px solid #3b82f6; border-radius: 4px; color: #1a1a2e; flex: 1; font-size: 13px; padding: 2px 6px; outline: none; }

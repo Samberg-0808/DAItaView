@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import Editor from '@monaco-editor/react'
-import NavBar from '@/components/NavBar'
+import AdminLayout from './AdminLayout'
 import api from '@/api/client'
 import styles from './KnowledgeEditorPage.module.css'
 
@@ -67,7 +67,7 @@ export default function KnowledgeEditorPage() {
     onSuccess: () => qc.invalidateQueries({ queryKey: ['knowledge-gaps', sourceId] }),
   })
 
-  function openGapInEditor(gap: GapSignal) {
+  function openGapInEditor(_gap: GapSignal) {
     const examplesFile = files.find(f => f.path.includes('examples/'))
     if (examplesFile) selectFile(examplesFile.path)
     else if (files.length > 0) selectFile(files[0].path)
@@ -75,8 +75,7 @@ export default function KnowledgeEditorPage() {
   }
 
   return (
-    <div className={styles.page}>
-      <NavBar />
+    <AdminLayout>
       <div className={styles.body}>
         {/* File tree */}
         <aside className={styles.tree}>
@@ -154,6 +153,6 @@ export default function KnowledgeEditorPage() {
           )}
         </main>
       </div>
-    </div>
+    </AdminLayout>
   )
 }

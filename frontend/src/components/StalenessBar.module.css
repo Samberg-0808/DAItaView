@@ -1,6 +1,6 @@
 .bar { align-items: center; display: flex; gap: 8px; justify-content: flex-end; }
-.time { color: #555; font-size: 12px; }
-.action { background: none; border: 1px solid #333; border-radius: 6px; color: #888; cursor: pointer; font-size: 12px; padding: 3px 10px; }
-.action:hover { border-color: #555; color: #ececec; }
+.time { color: #94a3b8; font-size: 12px; }
+.action { background: none; border: 1px solid #e2e8f0; border-radius: 6px; color: #64748b; cursor: pointer; font-size: 12px; padding: 3px 10px; }
+.action:hover { border-color: #94a3b8; color: #1a1a2e; }
 .action:disabled { opacity: .5; cursor: not-allowed; }
-.error { color: #f87171; font-size: 12px; flex: 1; }
+.error { color: #ef4444; font-size: 12px; flex: 1; }

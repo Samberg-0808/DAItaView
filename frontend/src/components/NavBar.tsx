@@ -15,7 +15,7 @@ export default function NavBar() {
     <nav className={styles.nav}>
       <span className={styles.logo}>DAItaView</span>
       <div className={styles.right}>
-        {isAdmin && <Link className={styles.adminLink} to="/admin/users">Admin</Link>}
+        {isAdmin && <Link className={styles.adminLink} to={user?.role === 'super_admin' ? '/admin/users' : '/admin/sources'}>Admin</Link>}
         <span className={styles.username}>{user?.username}</span>
         <button className={styles.logout} onClick={handleLogout}>Sign out</button>
       </div>

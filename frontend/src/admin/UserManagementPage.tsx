@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import NavBar from '@/components/NavBar'
+import AdminLayout from './AdminLayout'
 import api from '@/api/client'
 import type { User, UserRole } from '@/types'
 import PermissionEditor from './PermissionEditor'
@@ -36,8 +36,7 @@ export default function UserManagementPage() {
   })
 
   return (
-    <div className={styles.page}>
-      <NavBar />
+    <AdminLayout>
       <div className={styles.content}>
         <div className={styles.header}>
           <h1 className={styles.title}>User Management</h1>
@@ -91,6 +90,6 @@ export default function UserManagementPage() {
         )}
       </div>
       {permUser && <PermissionEditor user={permUser} onClose={() => setPermUser(null)} />}
-    </div>
+    </AdminLayout>
   )
 }

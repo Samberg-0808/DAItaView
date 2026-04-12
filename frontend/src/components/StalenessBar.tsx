@@ -1,6 +1,5 @@
 import { useMutation } from '@tanstack/react-query'
 import api from '@/api/client'
-import type { SessionTurn } from '@/types'
 import styles from './StalenessBar.module.css'
 
 function relativeTime(iso: string) {
