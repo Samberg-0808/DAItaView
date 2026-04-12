@@ -5,6 +5,14 @@ import api from '@/api/client'
 import type { DataSource } from '@/types'
 import styles from './DataSourceAdminPage.module.css'
 
+function extractErrorMessage(err: unknown): string {
+  const detail = (err as any)?.response?.data?.detail
+  if (!detail) return 'Connection failed'
+  if (typeof detail === 'string') return detail
+  if (Array.isArray(detail)) return detail.map((d: any) => d?.msg ?? JSON.stringify(d)).join('; ')
+  return JSON.stringify(detail)
+}
+
 type DbType = 'postgres' | 'mysql' | 'sqlite'
 type FileType = 'csv' | 'json' | 'parquet'
 
@@ -14,7 +22,7 @@ export default function DataSourceAdminPage() {
   const qc = useQueryClient()
   const fileRef = useRef<HTMLInputElement>(null)
   const [showDbForm, setShowDbForm] = useState(false)
-  const [dbForm, setDbForm] = useState({ name: '', type: 'postgres' as DbType, host: '', port: '5432', database: '', username: '', password: '' })
+  const [dbForm, setDbForm] = useState({ name: '', type: 'postgres' as DbType, host: '', port: '5432', database: '', user: '', password: '' })
   const [uploadName, setUploadName] = useState('')
   const [uploadType, setUploadType] = useState<FileType>('csv')
   const [uploadFile, setUploadFile] = useState<File | null>(null)
@@ -28,7 +36,11 @@ export default function DataSourceAdminPage() {
     mutationFn: () => api.post('/sources', {
       name: dbForm.name,
       type: dbForm.type,
-      connection_config: { host: dbForm.host, port: Number(dbForm.port), database: dbForm.database, username: dbForm.username, password: dbForm.password },
+      host: dbForm.host,
+      port: Number(dbForm.port),
+      database: dbForm.database,
+      user: dbForm.user,
+      password: dbForm.password,
     }),
     onSuccess: () => { qc.invalidateQueries({ queryKey: ['sources'] }); setShowDbForm(false) },
   })
@@ -74,12 +86,12 @@ export default function DataSourceAdminPage() {
               <input className={styles.input} placeholder="Host" value={dbForm.host} onChange={e => setDbForm(p => ({ ...p, host: e.target.value }))} />
               <input className={styles.input} placeholder="Port" value={dbForm.port} onChange={e => setDbForm(p => ({ ...p, port: e.target.value }))} style={{ maxWidth: 80 }} />
               <input className={styles.input} placeholder="Database" value={dbForm.database} onChange={e => setDbForm(p => ({ ...p, database: e.target.value }))} />
-              <input className={styles.input} placeholder="Username" value={dbForm.username} onChange={e => setDbForm(p => ({ ...p, username: e.target.value }))} />
+              <input className={styles.input} placeholder="Username" value={dbForm.user} onChange={e => setDbForm(p => ({ ...p, user: e.target.value }))} />
               <input className={styles.input} placeholder="Password" type="password" value={dbForm.password} onChange={e => setDbForm(p => ({ ...p, password: e.target.value }))} />
               <button className={styles.saveBtn} onClick={() => addDbMut.mutate()} disabled={addDbMut.isPending}>
                 {addDbMut.isPending ? 'Connecting…' : 'Connect'}
               </button>
-              {addDbMut.isError && <p className={styles.error}>{String((addDbMut.error as any)?.response?.data?.detail ?? 'Connection failed')}</p>}
+              {addDbMut.isError && <p className={styles.error}>{extractErrorMessage(addDbMut.error)}</p>}
             </div>
           )}
 
