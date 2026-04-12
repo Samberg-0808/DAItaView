@@ -6,6 +6,7 @@ import ChatPage from '@/pages/ChatPage'
 import UserManagementPage from '@/admin/UserManagementPage'
 import DataSourceAdminPage from '@/admin/DataSourceAdminPage'
 import KnowledgeEditorPage from '@/admin/KnowledgeEditorPage'
+import KnowledgeIndexPage from '@/admin/KnowledgeIndexPage'
 import AuditLogPage from '@/admin/AuditLogPage'
 
 export default function App() {
@@ -18,7 +19,7 @@ export default function App() {
           <Route path="/chat/:sessionId" element={<ProtectedRoute><ChatPage /></ProtectedRoute>} />
           <Route path="/admin/users" element={<ProtectedRoute><UserManagementPage /></ProtectedRoute>} />
           <Route path="/admin/sources" element={<ProtectedRoute><DataSourceAdminPage /></ProtectedRoute>} />
-          <Route path="/admin/knowledge" element={<Navigate to="/admin/sources" replace />} />
+          <Route path="/admin/knowledge" element={<ProtectedRoute><KnowledgeIndexPage /></ProtectedRoute>} />
           <Route path="/admin/knowledge/:sourceId" element={<ProtectedRoute><KnowledgeEditorPage /></ProtectedRoute>} />
           <Route path="/admin/audit" element={<ProtectedRoute><AuditLogPage /></ProtectedRoute>} />
           <Route path="*" element={<Navigate to="/chat" replace />} />
