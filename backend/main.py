@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.db import AsyncSessionLocal
-from backend.routers import audit, auth, data_sources, knowledge, sessions, users
+from backend.routers import audit, auth, data_sources, groups, knowledge, sessions, users
 from backend.services.auth_service import seed_superadmin
 
 
@@ -27,6 +27,7 @@ app.add_middleware(
 
 app.include_router(auth.router)
 app.include_router(users.router)
+app.include_router(groups.router)
 app.include_router(data_sources.router)
 app.include_router(knowledge.router)
 app.include_router(sessions.router)

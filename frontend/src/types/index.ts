@@ -45,3 +45,12 @@ export interface ClarificationQuestion {
   text: string
   options: string[]
 }
+
+export interface Group {
+  id: string
+  name: string
+  description: string | null
+  created_at: string | null
+  member_count: number
+  members: { user_id: string }[]
+}

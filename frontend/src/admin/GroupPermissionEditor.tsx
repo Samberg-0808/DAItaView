@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react'
 import { useQuery, useMutation } from '@tanstack/react-query'
 import api from '@/api/client'
-import type { DataSource, User } from '@/types'
+import type { DataSource, Group } from '@/types'
 import styles from './PermissionEditor.module.css'
 
 interface TablePermission {
   source_id: string
-  permitted_tables: string[] | null  // null = all tables
+  permitted_tables: string[] | null
 }
 
 interface Props {
-  user: User
+  group: Group
   onClose: () => void
 }
 
@@ -22,18 +22,17 @@ function accessLevelsForSource(src: DataSource): AccessLevel[] {
   return FILE_TYPES.includes(src.type) ? ['none', 'full'] : ['none', 'full', 'table']
 }
 
-export default function PermissionEditor({ user, onClose }: Props) {
+export default function GroupPermissionEditor({ group, onClose }: Props) {
   const { data: sources = [] } = useQuery<DataSource[]>({
     queryKey: ['sources'],
     queryFn: () => api.get('/sources').then(r => r.data),
   })
 
   const { data: existingPerms = [] } = useQuery<TablePermission[]>({
-    queryKey: ['permissions', user.id],
-    queryFn: () => api.get(`/users/${user.id}/permissions`).then(r => r.data),
+    queryKey: ['group-permissions', group.id],
+    queryFn: () => api.get(`/groups/${group.id}/permissions`).then(r => r.data),
   })
 
-  // sourceId → { access: 'none'|'full'|'table', tables: string[] }
   const [config, setConfig] = useState<Record<string, { access: AccessLevel; tables: string[] }>>({})
   const [schemaTables, setSchemaTables] = useState<Record<string, string[]>>({})
 
@@ -63,9 +62,9 @@ export default function PermissionEditor({ user, onClose }: Props) {
     mutationFn: async () => {
       for (const [sourceId, { access, tables }] of Object.entries(config)) {
         if (access === 'none') {
-          await api.delete(`/users/${user.id}/permissions/${sourceId}`).catch(() => {})
+          await api.delete(`/groups/${group.id}/permissions/${sourceId}`).catch(() => {})
         } else {
-          await api.post(`/users/${user.id}/permissions`, {
+          await api.post(`/groups/${group.id}/permissions`, {
             source_id: sourceId,
             permitted_tables: access === 'full' ? null : tables,
           })
@@ -91,16 +90,17 @@ export default function PermissionEditor({ user, onClose }: Props) {
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.modal} onClick={e => e.stopPropagation()}>
-        <h2 className={styles.title}>Permissions — {user.username}</h2>
+        <h2 className={styles.title}>Permissions — {group.name}</h2>
         <div className={styles.list}>
           {sources.map(src => {
             const cfg = config[src.id] ?? { access: 'none', tables: [] }
+            const levels = accessLevelsForSource(src)
             return (
               <div key={src.id} className={styles.sourceRow}>
                 <div className={styles.sourceHeader}>
                   <span className={styles.sourceName}>{src.name}</span>
                   <div className={styles.accessBtns}>
-                    {accessLevelsForSource(src).map(a => (
+                    {levels.map(a => (
                       <button
                         key={a}
                         className={`${styles.accessBtn} ${cfg.access === a ? styles.active : ''}`}

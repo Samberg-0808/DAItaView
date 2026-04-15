@@ -21,7 +21,8 @@ if database_url:
 # Import all models so Alembic can detect them
 from backend.models.base import Base  # noqa: F401
 from backend.models.user import User  # noqa: F401
-from backend.models.data_source import DataSource, UserSourcePermission  # noqa: F401
+from backend.models.data_source import DataSource  # noqa: F401
+from backend.models.group import Group, GroupMembership, GroupSourcePermission  # noqa: F401
 from backend.models.session import ChatSession, SessionTurn  # noqa: F401
 from backend.models.audit import AuditLog  # noqa: F401
 from backend.models.knowledge import KnowledgeGapSignal  # noqa: F401

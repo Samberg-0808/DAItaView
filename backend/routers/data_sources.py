@@ -93,11 +93,13 @@ async def get_schema(
     db: AsyncSession = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
+    manager = DataSourceManager(db)
+    full_schema = await manager.extract_schema(source_id)
+    if current_user.role in (UserRole.super_admin, UserRole.data_admin):
+        return full_schema
     permitted = await get_permitted_tables(db, current_user.id, source_id)
     if permitted == []:  # empty list = no access
         raise HTTPException(status_code=403, detail="No access to this data source")
-    manager = DataSourceManager(db)
-    full_schema = await manager.extract_schema(source_id)
     return manager.get_filtered_schema(full_schema, permitted)
 
 

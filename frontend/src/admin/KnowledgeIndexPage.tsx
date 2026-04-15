@@ -24,6 +24,24 @@ export default function KnowledgeIndexPage() {
             <h2 className={styles.sectionTitle}>Select a data source to edit its knowledge base</h2>
           </div>
 
+          <p style={{ fontSize: 13, color: '#64748b', lineHeight: 1.6, margin: '0 0 12px' }}>
+            The knowledge editor lets you provide business context that the AI uses when answering
+            questions about your data. For each data source you can describe tables, columns,
+            metrics, and common queries in plain language. Select a data source below and click
+            <strong> Edit Knowledge</strong> to open its editor.
+          </p>
+
+          <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 8, padding: '14px 16px', marginBottom: 20, fontSize: 13, color: '#475569', lineHeight: 1.7 }}>
+            <p style={{ margin: '0 0 8px', fontWeight: 600, color: '#1a1a2e' }}>Knowledge file types</p>
+            <ul style={{ margin: 0, paddingLeft: 18 }}>
+              <li><strong>global.md</strong> — General rules and context shared across all data sources, such as company terminology, date conventions, or formatting preferences.</li>
+              <li><strong>overview.md</strong> — A high-level summary of this specific data source: what it contains, how it is organized, and key relationships between tables.</li>
+              <li><strong>domain</strong> — One file per business domain (e.g. "sales", "inventory"). Describes domain-specific metrics, KPIs, and business logic the AI should know.</li>
+              <li><strong>table</strong> — One file per database table. Documents column meanings, accepted values, join keys, and any nuances not obvious from the schema alone.</li>
+              <li><strong>example</strong> — Sample question-and-answer pairs that show the AI how to translate common business questions into correct queries.</li>
+            </ul>
+          </div>
+
           {isLoading && <p className={styles.empty}>Loading…</p>}
 
           {!isLoading && dbSources.length === 0 && (

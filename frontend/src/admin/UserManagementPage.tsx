@@ -3,7 +3,6 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import AdminLayout from './AdminLayout'
 import api from '@/api/client'
 import type { User, UserRole } from '@/types'
-import PermissionEditor from './PermissionEditor'
 import styles from './UserManagementPage.module.css'
 
 const ROLES: UserRole[] = ['super_admin', 'data_admin', 'user']
@@ -11,7 +10,6 @@ const ROLE_LABELS: Record<UserRole, string> = { super_admin: 'Super Admin', data
 
 export default function UserManagementPage() {
   const qc = useQueryClient()
-  const [permUser, setPermUser] = useState<User | null>(null)
   const [showForm, setShowForm] = useState(false)
   const [form, setForm] = useState({ email: '', username: '', password: '', role: 'user' as UserRole })
 
@@ -78,7 +76,6 @@ export default function UserManagementPage() {
                   </td>
                   <td><span className={u.is_active ? styles.active : styles.inactive}>{u.is_active ? 'Active' : 'Inactive'}</span></td>
                   <td className={styles.actions}>
-                    <button className={styles.permBtn} onClick={() => setPermUser(u)}>Permissions</button>
                     {u.is_active && (
                       <button className={styles.deactivateBtn} onClick={() => { if (confirm(`Deactivate ${u.username}?`)) deactivateMut.mutate(u.id) }}>Deactivate</button>
                     )}
@@ -89,7 +86,6 @@ export default function UserManagementPage() {
           </table>
         )}
       </div>
-      {permUser && <PermissionEditor user={permUser} onClose={() => setPermUser(null)} />}
     </AdminLayout>
   )
 }

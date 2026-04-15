@@ -33,6 +33,8 @@ export function useSessionWebSocket(sessionId: string, token: string): UseSessio
   const url = `${wsUrl}/sessions/${sessionId}/query`
 
   useEffect(() => {
+    if (!sessionId) return
+
     const ws = new WebSocket(url)
     wsRef.current = ws
 
@@ -59,7 +61,7 @@ export function useSessionWebSocket(sessionId: string, token: string): UseSessio
     }
 
     return () => ws.close()
-  }, [url])
+  }, [url, sessionId])
 
   const sendQuestion = useCallback((question: string, clarificationAnswers?: Record<string, string>) => {
     if (!wsRef.current || wsRef.current.readyState !== WebSocket.OPEN) return

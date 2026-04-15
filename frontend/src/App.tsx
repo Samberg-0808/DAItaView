@@ -7,6 +7,7 @@ import UserManagementPage from '@/admin/UserManagementPage'
 import DataSourceAdminPage from '@/admin/DataSourceAdminPage'
 import KnowledgeEditorPage from '@/admin/KnowledgeEditorPage'
 import KnowledgeIndexPage from '@/admin/KnowledgeIndexPage'
+import GroupManagementPage from '@/admin/GroupManagementPage'
 import AuditLogPage from '@/admin/AuditLogPage'
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/chat" element={<ProtectedRoute><ChatPage /></ProtectedRoute>} />
           <Route path="/chat/:sessionId" element={<ProtectedRoute><ChatPage /></ProtectedRoute>} />
           <Route path="/admin/users" element={<ProtectedRoute><UserManagementPage /></ProtectedRoute>} />
+          <Route path="/admin/groups" element={<ProtectedRoute><GroupManagementPage /></ProtectedRoute>} />
           <Route path="/admin/sources" element={<ProtectedRoute><DataSourceAdminPage /></ProtectedRoute>} />
           <Route path="/admin/knowledge" element={<ProtectedRoute><KnowledgeIndexPage /></ProtectedRoute>} />
           <Route path="/admin/knowledge/:sourceId" element={<ProtectedRoute><KnowledgeEditorPage /></ProtectedRoute>} />
